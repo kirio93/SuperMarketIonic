@@ -8,7 +8,6 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { AuthGuardProvider } from '../providers/auth-guard/auth-guard';
 import { CartaCreditoProvider } from '../providers/carta-credito/carta-credito';
 import { LoginServiceProvider } from '../providers/login-service/login-service';
 import { SharedServiceProvider } from '../providers/shared-service/shared-service';
@@ -39,7 +38,7 @@ import {FormsModule} from "@angular/forms";
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthGuardProvider,
+
     CartaCreditoProvider,
     LoginServiceProvider,
     SharedServiceProvider,

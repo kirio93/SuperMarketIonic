@@ -8,11 +8,21 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <div class="container">
+    <h4 text-center>Login</h4>
+    <form action="#" id="login-form" (ngSubmit)="login()">
+      <div class="login-box">
+        <ion-input type="email" name="username" class="form-control" placeholder="User" required
+                   [(ngModel)]="user.username"></ion-input>
+      <hr />
+        <ion-input type="password" name="password" class="form-control" placeholder="Password" required
+                   [(ngModel)]="user.password"></ion-input>
+      </div>
+      <br>
+      <div align="center">
+        <button ion-button class="mat-raised-button"> Login</button>
+      </div>
+      <p text-center>Don't have an account? <a href="#" routerLink="/register">Sign up</a></p>
+    </form>
+  </div>
 </ion-content>
