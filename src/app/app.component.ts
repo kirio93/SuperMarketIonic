@@ -41,7 +41,7 @@ export class MyApp {
       }, (err) => {
         localStorage.removeItem('user');
         localStorage.removeItem('token');
-        this.logged = true;
+        this.logged = false;
         this.navCtrl.setRoot('page-home');
 
       });
@@ -66,6 +66,23 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
+  logout() {
+    this.loginService.logout().subscribe(data => {
+      console.log('logged out.' + data);
+      localStorage.removeItem('user');
+      localStorage.removeItem('token');
+      this.navCtrl.setRoot('page-home');
+    }, (err) => {
+      console.log('logger out. ');
+      localStorage.removeItem('user');
+      this.navCtrl.setRoot('page-home');
+      this.logged = false;
+    });
+  }
 
+  isLogged(event) {
+    console.log(event);
+    this.logged = event;
+  }
 
 }
