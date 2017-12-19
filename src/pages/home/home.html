@@ -1,11 +1,11 @@
-<ion-header>
+<!--<ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Home</ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header>-->
 
 <ion-content padding>
   <div class="container">
@@ -22,7 +22,8 @@
       <div align="center">
         <button ion-button class="mat-raised-button"> Login</button>
       </div>
-      <p text-center>Don't have an account? <a href="#" routerLink="/register">Sign up</a></p>
+      <p text-center>Don't have an account?  <button ion-button href="#" [navPush]= "pushPage" >Sign up</button></p>
     </form>
   </div>
 </ion-content>
+s

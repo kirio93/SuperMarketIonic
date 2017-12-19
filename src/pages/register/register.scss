@@ -1,3 +1,44 @@
 page-register {
+  .example-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    background: white;
+  }
 
+  .mat-raised-button {
+    width: 25% !important;
+    margin-bottom: 15px;
+  }
+
+  .second-btn {
+    margin: 10px;
+  }
+
+  .log-reg {
+    margin-top: 25px;
+  }
+
+  .title-reg {
+    font-family: Roboto,"Helvetica Neue",sans-serif !important;
+    color: dodgerblue;
+    margin-top: 15px;
+  }
+
+  .mat-form-field {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    width: 80%;
+    line-height: 1;
+    max-height: 50px;
+  }
+  .register-bkg{
+    background: url("https://s3.amazonaws.com/secretsaucefiles/photos/images/000/116/915/large/20160115-things-never-to-but-at-supermarket-.jpg?1485407745");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #wrapper {
+    min-height: 100vh;
+  }
 }
